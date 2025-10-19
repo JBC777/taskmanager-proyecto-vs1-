@@ -80,14 +80,19 @@ function deleteTask(button) {
 
   // 2. Obtener el ID de la tarea usando dataset
   // ✅ CORRECCIÓN T-02: Se reemplazó '.getAttribute("data-id")' por '.dataset.id'
-  // ❌ ERROR ANTERIOR: 'taskItem.dataset.id("data-id")' → sintaxis inválida
   const taskId = parseInt(taskItem.dataset.id);
 
-  // 3. Filtrar el array para eliminar la tarea
-  // ✅ CORRECCIÓN T-01: Comparación estricta con '!==' 
-  tasks = tasks.filter(t => t.id !== taskId);
+  // 3. Buscar índice de la tarea y eliminarla directamente del array
+  // ✅ CORRECCIÓN T-03: Se reemplazó reasignación de array por modificación directa con splice()
+  const index = tasks.findIndex(t => t.id === taskId);
+  if (index !== -1) {
+    tasks.splice(index, 1); // Elimina la tarea del array sin perder referencia (ISO/IEC 25021 - Fiabilidad)
+  }
 
-  // 4. Actualizar la interfaz
+  // 4. Eliminar del DOM
+  taskItem.remove();
+
+  // 5. Actualizar la interfaz
   renderTasks();
 }
 
@@ -152,3 +157,11 @@ function renderTasks() {
     taskList.appendChild(li);
   });
 }
+
+/// ==========================================
+// Exportar funciones y variables para Jest
+// ==========================================
+if (typeof module !== "undefined") {
+  module.exports = { addTask, deleteTask, completeTask, tasks };
+}
+
