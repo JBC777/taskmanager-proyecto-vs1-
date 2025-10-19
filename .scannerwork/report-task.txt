@@ -2,5 +2,5 @@ projectKey=taskmanager-proyecto-vs1
 serverUrl=http://localhost:9000
 serverVersion=25.10.0.114319
 dashboardUrl=http://localhost:9000/dashboard?id=taskmanager-proyecto-vs1
-ceTaskId=1cf43065-a25c-45bb-a987-00a1a0571d1a
-ceTaskUrl=http://localhost:9000/api/ce/task?id=1cf43065-a25c-45bb-a987-00a1a0571d1a
+ceTaskId=67f29f35-1607-41d1-82d3-7b6d38ac0d7b
+ceTaskUrl=http://localhost:9000/api/ce/task?id=67f29f35-1607-41d1-82d3-7b6d38ac0d7b

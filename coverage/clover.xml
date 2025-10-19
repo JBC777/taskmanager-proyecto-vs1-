@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1760855391338" clover="3.2.0">
-  <project timestamp="1760855391338" name="All files">
+<coverage generated="1760859958263" clover="3.2.0">
+  <project timestamp="1760859958263" name="All files">
     <metrics statements="50" coveredstatements="48" conditionals="12" coveredconditionals="9" methods="9" coveredmethods="7" elements="71" coveredelements="64" complexity="0" loc="50" ncloc="50" packages="1" files="1" classes="1"/>
     <file name="script.js" path="C:\Users\JaimeBolivar\Desktop\3.Estándares y Metricas de Seguridad\taskmanager-proyecto-vs1-\script.js">
       <metrics statements="50" coveredstatements="48" conditionals="12" coveredconditionals="9" methods="9" coveredmethods="7"/>
