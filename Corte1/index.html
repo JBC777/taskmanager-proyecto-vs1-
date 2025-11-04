@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManager - Gestor de Tareas Personal</title>
+    <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo de estilos -->
+</head>
+<body>
+    <div class="container">
+        <h1>TaskManager</h1>
+        <p>Gestiona tus tareas diarias de forma simple y rápida.</p>
+
+        <!-- Formulario para agregar nueva tarea -->
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Escribe una nueva tarea..." autocomplete="off">
+            <button onclick="addTask()">Agregar</button>
+        </div>
+
+        <!-- Lista donde se mostrarán las tareas -->
+        <ul id="taskList">
+            <!-- Las tareas se agregarán aquí dinámicamente mediante JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Enlaza el archivo de lógica (JavaScript) -->
+    <script src="script.js"></script>
+</body>
+</html>
