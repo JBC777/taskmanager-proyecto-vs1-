@@ -63,3 +63,11 @@ En lugar de reducir el `manifest.json` a un solo ícono, se optó por una estrat
 - **Cumplimiento total** con la checklist de Google para PWAs.
 
 Esta decisión refuerza el compromiso con estándares de calidad y una experiencia de usuario consistente.
+
+
+## Gestión de Archivos Duplicados
+
+Durante el desarrollo, se generó un archivo duplicado llamado `manifest copy.json` en la carpeta `Corte2/`. Este archivo no es funcional ni necesario para el funcionamiento de la PWA.
+### Acción Tomada
+- El archivo `manifest copy.json` fue eliminado para mantener la estructura del proyecto limpia y organizada.
+- Solo se conserva el archivo `manifest.json`, que contiene la configuración correcta de la PWA.
