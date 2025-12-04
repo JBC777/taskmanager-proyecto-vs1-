@@ -1,6 +1,7 @@
 # Documentación: TaskManager como PWA
 
 
+
 # Manifest.json - Documentación
 
 ## short_name
@@ -28,7 +29,6 @@ Idioma principal del contenido.
 
 Este archivo es fundamental para que la aplicación funcione correctamente en modo offline. Se muestra cuando el usuario intenta acceder a la app sin conexión a internet.
 
-
 ### Propósito
 - Proporcionar una experiencia de usuario amigable cuando no hay conexión.
 - Informar al usuario que la app sigue siendo funcional en modo offline.
@@ -51,6 +51,7 @@ El Service Worker intercepta todas las solicitudes de red. Si falla la conexión
 - Implementar una animación sutil para mejorar la experiencia de usuario.
 
 
+
 ## Estrategia de Íconos
 
 En lugar de reducir el `manifest.json` a un solo ícono, se optó por una estrategia más robusta: generar todos los íconos en los tamaños requeridos por la especificación PWA.
@@ -65,9 +66,20 @@ En lugar de reducir el `manifest.json` a un solo ícono, se optó por una estrat
 Esta decisión refuerza el compromiso con estándares de calidad y una experiencia de usuario consistente.
 
 
+
 ## Gestión de Archivos Duplicados
 
 Durante el desarrollo, se generó un archivo duplicado llamado `manifest copy.json` en la carpeta `Corte2/`. Este archivo no es funcional ni necesario para el funcionamiento de la PWA.
 ### Acción Tomada
 - El archivo `manifest copy.json` fue eliminado para mantener la estructura del proyecto limpia y organizada.
 - Solo se conserva el archivo `manifest.json`, que contiene la configuración correcta de la PWA.
+
+
+
+## Configuración de la Base de Datos (MySQL)
+
+Para evitar conflictos con otros servicios, se configuró MySQL en XAMPP para usar el puerto `33065` en lugar del predeterminado `3306`.
+### Cambios en config.php
+- Se modificó la constante `DB_HOST` para incluir el puerto:
+  ```php
+  define('DB_HOST', 'localhost:33065');

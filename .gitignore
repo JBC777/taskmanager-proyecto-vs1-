@@ -1,1 +1,5 @@
+# Archivos de diagnóstico (no incluir en el repositorio)
+criptografia/regenerar_hashes.php
+criptografia/test_conexion.php
+criptografia/verificar_hash.php
 .scannerwork/
